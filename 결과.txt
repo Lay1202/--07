@@ -1,0 +1,54 @@
+=== Graph: 100 vertices, undirected simple graph (seed = 2024) ===
+=== Edge insertion/deletion: 10 edges each (comparisons are summed) ===
+
+Case 1 : Sparse Graph - Adjacency Matrix
+Memory                         : 40008 Bytes
+Edge insertion comparisons     : 10
+Edge deletion comparisons      : 10
+Connectivity check comparisons : 1
+Adjacent vertices comparisons  : 100
+  - Connectivity (21, 7) : not connected
+  - Adjacent vertices of 89 (3): 46 82 91
+
+Case 2 : Sparse Graph - Adjacency List
+Memory                         : 4016 Bytes
+Edge insertion comparisons     : 18
+Edge deletion comparisons      : 37
+Connectivity check comparisons : 1
+Adjacent vertices comparisons  : 3
+  - Connectivity (21, 7) : not connected
+  - Adjacent vertices of 89 (3): 46 82 91
+
+Case 3 : Dense Graph - Adjacency Matrix
+Memory                         : 40008 Bytes
+Edge insertion comparisons     : 10
+Edge deletion comparisons      : 10
+Connectivity check comparisons : 1
+Adjacent vertices comparisons  : 100
+  - Connectivity (38, 84) : connected
+  - Adjacent vertices of 44 (76): 0 1 2 3 4 5 6 7 8 9 10 11 13 14 15 16 18 19 20 21 22 23 24 26 29 31 32 34 37 38 39 41 42 43 45 46 47 49 50 51 54 55 56 57 59 60 61 62 63 64 65 66 67 69 70 71 73 75 77 78 79 81 82 83 84 85 86 88 89 90 91 93 95 96 97 98
+
+Case 4 : Dense Graph - Adjacency List
+Memory                         : 128816 Bytes
+Edge insertion comparisons     : 789
+Edge deletion comparisons      : 1079
+Connectivity check comparisons : 37
+Adjacent vertices comparisons  : 76
+  - Connectivity (38, 84) : connected
+  - Adjacent vertices of 44 (76): 0 1 2 3 4 5 6 7 8 9 10 11 13 14 15 16 18 19 20 21 22 23 24 26 29 31 32 34 37 38 39 41 42 43 45 46 47 49 50 51 54 55 56 57 59 60 61 62 63 64 65 66 67 69 70 71 73 75 77 78 79 81 82 83 84 85 86 88 89 90 91 93 95 96 97 98
+
+--- Verification ---
+Sparse graph: matrix and list are IDENTICAL
+Dense  graph: matrix and list are IDENTICAL
+
+--- Supplementary averages ---
+  [Sparse] 참고 평균값
+    삽입 1회 평균 비교 횟수            Matrix     1.00 | List     1.80
+    삭제 1회 평균 비교 횟수            Matrix     1.00 | List     3.70
+    연결 확인 평균 (모든 정점 쌍)      Matrix     1.00 | List     2.06
+    인접 정점 탐색 평균 (모든 정점)    Matrix   100.00 | List     2.00
+  [Dense] 참고 평균값
+    삽입 1회 평균 비교 횟수            Matrix     1.00 | List    78.90
+    삭제 1회 평균 비교 횟수            Matrix     1.00 | List   107.90
+    연결 확인 평균 (모든 정점 쌍)      Matrix     1.00 | List    47.87
+    인접 정점 탐색 평균 (모든 정점)    Matrix   100.00 | List    80.00
